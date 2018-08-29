@@ -31,6 +31,7 @@
     "graphql-tag": "^2.9.2"
   },
   "devDependencies": {
+    "adm-zip": "^0.4.11",
     "graphql-cli": "^2.16.5",
     "jest": "^23.5.0"
   }
