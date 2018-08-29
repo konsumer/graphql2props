@@ -4,8 +4,8 @@
   "description": "Generate react proptypes from graphql schema",
   "main": "index.js",
   "scripts": {
-    "test:schema": "graphql --project=swapi get-schema -o swapi.graphql",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:schema": "graphql --project=swapi get-schema -o test/swapi.graphql",
+    "test": "jest"
   },
   "bin": {
     "graphql2props": "./cli.js"
@@ -31,6 +31,7 @@
     "graphql-tag": "^2.9.2"
   },
   "devDependencies": {
-    "graphql-cli": "^2.16.5"
+    "graphql-cli": "^2.16.5",
+    "jest": "^23.5.0"
   }
 }
