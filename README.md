@@ -26,7 +26,7 @@ const code = graphql2props(readFileSync('schema.graphql').toString())
 npx graphql2props schema.graphql > props.js
 ```
 
-You might have to tune the output a bit (custom scalars aren't supported, for example.) but you can use the pros like this:
+You might have to tune the output a bit (custom scalars aren't supported, for example.) but you can use the props like this:
 
 ```js
 import React from 'react'
