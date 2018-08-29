@@ -1,6 +1,6 @@
 {
   "name": "graphql2props",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generate react proptypes from graphql schema",
   "main": "index.js",
   "scripts": {
