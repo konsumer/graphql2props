@@ -1,0 +1,7 @@
+# this is just for downloading demo schema
+projects:
+  swapi:
+    schemaPath: swapi.graphql
+    extensions:
+      endpoints:
+        default: https://api.graphcms.com/simple/v1/swapi

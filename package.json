@@ -1,0 +1,36 @@
+{
+  "name": "graphql2props",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:schema": "graphql --project=swapi get-schema -o swapi.graphql",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "graphql2props": "./cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konsumer/graphql2props.git"
+  },
+  "keywords": [
+    "props",
+    "proptypes",
+    "graphql",
+    "react"
+  ],
+  "author": "David Konsumer <konsumer@jetboystudio.com> (http://konsumer.js.org/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/konsumer/graphql2props/issues"
+  },
+  "homepage": "https://github.com/konsumer/graphql2props#readme",
+  "dependencies": {
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2"
+  },
+  "devDependencies": {
+    "graphql-cli": "^2.16.5"
+  }
+}
