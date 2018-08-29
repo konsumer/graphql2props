@@ -1,0 +1,710 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`graphql2props should be able to parse SWAPI 1`] = `
+"const PropTypes = require('prop-types')
+
+module.exports._ModelMutationType = PropTypes.oneOf([
+  \\"CREATED\\",
+  \\"UPDATED\\",
+  \\"DELETED\\"
+])
+
+module.exports._QueryMeta = PropTypes.shape({
+  count: PropTypes.number.isRequired
+})
+
+module.exports.AddToFilmPlanetsPayload = PropTypes.shape({
+  filmsFilm: module.exports.Film,
+  planetsPlanet: module.exports.Planet
+})
+
+module.exports.AddToFilmSpeciesPayload = PropTypes.shape({
+  filmsFilm: module.exports.Film,
+  speciesSpecies: module.exports.Species
+})
+
+module.exports.AddToFilmStarshipsPayload = PropTypes.shape({
+  filmsFilm: module.exports.Film,
+  starshipsStarship: module.exports.Starship
+})
+
+module.exports.AddToFilmVehiclesPayload = PropTypes.shape({
+  filmsFilm: module.exports.Film,
+  vehiclesVehicle: module.exports.Vehicle
+})
+
+module.exports.AddToPeopleFilmPayload = PropTypes.shape({
+  charactersPerson: module.exports.Person,
+  filmsFilm: module.exports.Film
+})
+
+module.exports.AddToPeoplePlanetPayload = PropTypes.shape({
+  residentsPerson: module.exports.Person,
+  homeworldPlanet: module.exports.Planet
+})
+
+module.exports.AddToPeopleSpeciesPayload = PropTypes.shape({
+  peoplePerson: module.exports.Person,
+  speciesSpecies: module.exports.Species
+})
+
+module.exports.AddToPeopleStarshipsPayload = PropTypes.shape({
+  pilotsPerson: module.exports.Person,
+  starshipsStarship: module.exports.Starship
+})
+
+module.exports.AddToPeopleVehiclesPayload = PropTypes.shape({
+  pilotsPerson: module.exports.Person,
+  vehiclesVehicle: module.exports.Vehicle
+})
+
+module.exports.Asset = PropTypes.shape({
+  createdAt: module.exports.DateTime.isRequired,
+  fileName: PropTypes.string.isRequired,
+  handle: PropTypes.string.isRequired,
+  height: PropTypes.number,
+  id: module.exports.ID.isRequired,
+  mimeType: PropTypes.string,
+  size: PropTypes.number.isRequired,
+  updatedAt: module.exports.DateTime.isRequired,
+  url: PropTypes.string.isRequired,
+  width: PropTypes.number
+})
+
+module.exports.AssetOrderBy = PropTypes.oneOf([
+  \\"createdAt_ASC\\",
+  \\"createdAt_DESC\\",
+  \\"fileName_ASC\\",
+  \\"fileName_DESC\\",
+  \\"handle_ASC\\",
+  \\"handle_DESC\\",
+  \\"height_ASC\\",
+  \\"height_DESC\\",
+  \\"id_ASC\\",
+  \\"id_DESC\\",
+  \\"mimeType_ASC\\",
+  \\"mimeType_DESC\\",
+  \\"size_ASC\\",
+  \\"size_DESC\\",
+  \\"updatedAt_ASC\\",
+  \\"updatedAt_DESC\\",
+  \\"url_ASC\\",
+  \\"url_DESC\\",
+  \\"width_ASC\\",
+  \\"width_DESC\\"
+])
+
+module.exports.AssetPreviousValues = PropTypes.shape({
+  createdAt: module.exports.DateTime.isRequired,
+  fileName: PropTypes.string.isRequired,
+  handle: PropTypes.string.isRequired,
+  height: PropTypes.number,
+  id: module.exports.ID.isRequired,
+  mimeType: PropTypes.string,
+  size: PropTypes.number.isRequired,
+  updatedAt: module.exports.DateTime.isRequired,
+  url: PropTypes.string.isRequired,
+  width: PropTypes.number
+})
+
+module.exports.AssetSubscriptionPayload = PropTypes.shape({
+  mutation: module.exports._ModelMutationType.isRequired,
+  node: module.exports.Asset,
+  updatedFields: PropTypes.arrayOf(PropTypes.string),
+  previousValues: module.exports.AssetPreviousValues
+})
+
+module.exports.Film = PropTypes.shape({
+  characters: PropTypes.arrayOf(module.exports.Person),
+  createdAt: module.exports.DateTime.isRequired,
+  director: PropTypes.string,
+  episodeId: PropTypes.number.isRequired,
+  id: module.exports.ID.isRequired,
+  isPublished: PropTypes.bool.isRequired,
+  openingCrawl: PropTypes.string,
+  planets: PropTypes.arrayOf(module.exports.Planet),
+  producers: PropTypes.arrayOf(PropTypes.string),
+  releaseDate: module.exports.DateTime,
+  species: PropTypes.arrayOf(module.exports.Species),
+  starships: PropTypes.arrayOf(module.exports.Starship),
+  title: PropTypes.string.isRequired,
+  updatedAt: module.exports.DateTime.isRequired,
+  vehicles: PropTypes.arrayOf(module.exports.Vehicle),
+  _charactersMeta: module.exports._QueryMeta.isRequired,
+  _planetsMeta: module.exports._QueryMeta.isRequired,
+  _speciesMeta: module.exports._QueryMeta.isRequired,
+  _starshipsMeta: module.exports._QueryMeta.isRequired,
+  _vehiclesMeta: module.exports._QueryMeta.isRequired
+})
+
+module.exports.FilmOrderBy = PropTypes.oneOf([
+  \\"createdAt_ASC\\",
+  \\"createdAt_DESC\\",
+  \\"director_ASC\\",
+  \\"director_DESC\\",
+  \\"episodeId_ASC\\",
+  \\"episodeId_DESC\\",
+  \\"id_ASC\\",
+  \\"id_DESC\\",
+  \\"isPublished_ASC\\",
+  \\"isPublished_DESC\\",
+  \\"openingCrawl_ASC\\",
+  \\"openingCrawl_DESC\\",
+  \\"releaseDate_ASC\\",
+  \\"releaseDate_DESC\\",
+  \\"title_ASC\\",
+  \\"title_DESC\\",
+  \\"updatedAt_ASC\\",
+  \\"updatedAt_DESC\\"
+])
+
+module.exports.FilmPreviousValues = PropTypes.shape({
+  createdAt: module.exports.DateTime.isRequired,
+  director: PropTypes.string,
+  episodeId: PropTypes.number.isRequired,
+  id: module.exports.ID.isRequired,
+  isPublished: PropTypes.bool.isRequired,
+  openingCrawl: PropTypes.string,
+  producers: PropTypes.arrayOf(PropTypes.string),
+  releaseDate: module.exports.DateTime,
+  title: PropTypes.string.isRequired,
+  updatedAt: module.exports.DateTime.isRequired
+})
+
+module.exports.FilmSubscriptionPayload = PropTypes.shape({
+  mutation: module.exports._ModelMutationType.isRequired,
+  node: module.exports.Film,
+  updatedFields: PropTypes.arrayOf(PropTypes.string),
+  previousValues: module.exports.FilmPreviousValues
+})
+
+module.exports.InvokeFunctionPayload = PropTypes.shape({
+  result: PropTypes.string.isRequired,
+  clientMutationId: PropTypes.string
+})
+
+module.exports.Person = PropTypes.shape({
+  birthYear: PropTypes.string,
+  createdAt: module.exports.DateTime.isRequired,
+  eyeColor: PropTypes.arrayOf(module.exports.PERSON_EYE_COLOR),
+  films: PropTypes.arrayOf(module.exports.Film),
+  gender: module.exports.PERSON_GENDER,
+  hairColor: PropTypes.arrayOf(module.exports.PERSON_HAIR_COLOR),
+  height: PropTypes.number,
+  homeworld: module.exports.Planet,
+  id: module.exports.ID.isRequired,
+  isPublished: PropTypes.bool.isRequired,
+  mass: PropTypes.number,
+  name: PropTypes.string.isRequired,
+  skinColor: PropTypes.arrayOf(module.exports.PERSON_SKIN_COLOR),
+  species: PropTypes.arrayOf(module.exports.Species),
+  starships: PropTypes.arrayOf(module.exports.Starship),
+  updatedAt: module.exports.DateTime.isRequired,
+  vehicles: PropTypes.arrayOf(module.exports.Vehicle),
+  _filmsMeta: module.exports._QueryMeta.isRequired,
+  _speciesMeta: module.exports._QueryMeta.isRequired,
+  _starshipsMeta: module.exports._QueryMeta.isRequired,
+  _vehiclesMeta: module.exports._QueryMeta.isRequired
+})
+
+module.exports.PERSON_EYE_COLOR = PropTypes.oneOf([
+  \\"UNKNOWN\\",
+  \\"BLUE\\",
+  \\"YELLOW\\",
+  \\"RED\\",
+  \\"BROWN\\",
+  \\"BLUEGREY\\",
+  \\"BLACK\\",
+  \\"ORANGE\\",
+  \\"HAZEL\\",
+  \\"PINK\\",
+  \\"GOLD\\",
+  \\"GREEN\\",
+  \\"WHITE\\",
+  \\"DARK\\"
+])
+
+module.exports.PERSON_GENDER = PropTypes.oneOf([
+  \\"UNKNOWN\\",
+  \\"MALE\\",
+  \\"FEMALE\\",
+  \\"HERMAPHRODITE\\"
+])
+
+module.exports.PERSON_HAIR_COLOR = PropTypes.oneOf([
+  \\"AUBURN\\",
+  \\"BLACK\\",
+  \\"BLONDE\\",
+  \\"BROWN\\",
+  \\"GREY\\",
+  \\"UNKNOWN\\",
+  \\"WHITE\\"
+])
+
+module.exports.PERSON_SKIN_COLOR = PropTypes.oneOf([
+  \\"UNKNOWN\\",
+  \\"FAIR\\",
+  \\"GOLD\\",
+  \\"WHITE\\",
+  \\"LIGHT\\",
+  \\"GREEN\\",
+  \\"GREENTAN\\",
+  \\"PALE\\",
+  \\"METAL\\",
+  \\"DARK\\",
+  \\"BROWNMOTTLE\\",
+  \\"BROWN\\",
+  \\"GREY\\",
+  \\"MOTTLEDGREEN\\",
+  \\"ORANGE\\",
+  \\"BLUE\\",
+  \\"RED\\",
+  \\"YELLOW\\",
+  \\"TAN\\",
+  \\"SILVER\\"
+])
+
+module.exports.PersonOrderBy = PropTypes.oneOf([
+  \\"birthYear_ASC\\",
+  \\"birthYear_DESC\\",
+  \\"createdAt_ASC\\",
+  \\"createdAt_DESC\\",
+  \\"gender_ASC\\",
+  \\"gender_DESC\\",
+  \\"height_ASC\\",
+  \\"height_DESC\\",
+  \\"id_ASC\\",
+  \\"id_DESC\\",
+  \\"isPublished_ASC\\",
+  \\"isPublished_DESC\\",
+  \\"mass_ASC\\",
+  \\"mass_DESC\\",
+  \\"name_ASC\\",
+  \\"name_DESC\\",
+  \\"updatedAt_ASC\\",
+  \\"updatedAt_DESC\\"
+])
+
+module.exports.PersonPreviousValues = PropTypes.shape({
+  birthYear: PropTypes.string,
+  createdAt: module.exports.DateTime.isRequired,
+  eyeColor: PropTypes.arrayOf(module.exports.PERSON_EYE_COLOR),
+  gender: module.exports.PERSON_GENDER,
+  hairColor: PropTypes.arrayOf(module.exports.PERSON_HAIR_COLOR),
+  height: PropTypes.number,
+  id: module.exports.ID.isRequired,
+  isPublished: PropTypes.bool.isRequired,
+  mass: PropTypes.number,
+  name: PropTypes.string.isRequired,
+  skinColor: PropTypes.arrayOf(module.exports.PERSON_SKIN_COLOR),
+  updatedAt: module.exports.DateTime.isRequired
+})
+
+module.exports.PersonSubscriptionPayload = PropTypes.shape({
+  mutation: module.exports._ModelMutationType.isRequired,
+  node: module.exports.Person,
+  updatedFields: PropTypes.arrayOf(PropTypes.string),
+  previousValues: module.exports.PersonPreviousValues
+})
+
+module.exports.Planet = PropTypes.shape({
+  climate: PropTypes.arrayOf(PropTypes.string),
+  createdAt: module.exports.DateTime.isRequired,
+  diameter: PropTypes.number,
+  films: PropTypes.arrayOf(module.exports.Film),
+  gravity: PropTypes.string,
+  id: module.exports.ID.isRequired,
+  isPublished: PropTypes.bool.isRequired,
+  name: PropTypes.string.isRequired,
+  orbitalPeriod: PropTypes.number,
+  population: PropTypes.number,
+  residents: PropTypes.arrayOf(module.exports.Person),
+  rotationPeriod: PropTypes.number,
+  surfaceWater: PropTypes.number,
+  terrain: PropTypes.arrayOf(PropTypes.string),
+  updatedAt: module.exports.DateTime.isRequired,
+  _filmsMeta: module.exports._QueryMeta.isRequired,
+  _residentsMeta: module.exports._QueryMeta.isRequired
+})
+
+module.exports.PlanetOrderBy = PropTypes.oneOf([
+  \\"createdAt_ASC\\",
+  \\"createdAt_DESC\\",
+  \\"diameter_ASC\\",
+  \\"diameter_DESC\\",
+  \\"gravity_ASC\\",
+  \\"gravity_DESC\\",
+  \\"id_ASC\\",
+  \\"id_DESC\\",
+  \\"isPublished_ASC\\",
+  \\"isPublished_DESC\\",
+  \\"name_ASC\\",
+  \\"name_DESC\\",
+  \\"orbitalPeriod_ASC\\",
+  \\"orbitalPeriod_DESC\\",
+  \\"population_ASC\\",
+  \\"population_DESC\\",
+  \\"rotationPeriod_ASC\\",
+  \\"rotationPeriod_DESC\\",
+  \\"surfaceWater_ASC\\",
+  \\"surfaceWater_DESC\\",
+  \\"updatedAt_ASC\\",
+  \\"updatedAt_DESC\\"
+])
+
+module.exports.PlanetPreviousValues = PropTypes.shape({
+  climate: PropTypes.arrayOf(PropTypes.string),
+  createdAt: module.exports.DateTime.isRequired,
+  diameter: PropTypes.number,
+  gravity: PropTypes.string,
+  id: module.exports.ID.isRequired,
+  isPublished: PropTypes.bool.isRequired,
+  name: PropTypes.string.isRequired,
+  orbitalPeriod: PropTypes.number,
+  population: PropTypes.number,
+  rotationPeriod: PropTypes.number,
+  surfaceWater: PropTypes.number,
+  terrain: PropTypes.arrayOf(PropTypes.string),
+  updatedAt: module.exports.DateTime.isRequired
+})
+
+module.exports.PlanetSubscriptionPayload = PropTypes.shape({
+  mutation: module.exports._ModelMutationType.isRequired,
+  node: module.exports.Planet,
+  updatedFields: PropTypes.arrayOf(PropTypes.string),
+  previousValues: module.exports.PlanetPreviousValues
+})
+
+module.exports.RemoveFromFilmPlanetsPayload = PropTypes.shape({
+  filmsFilm: module.exports.Film,
+  planetsPlanet: module.exports.Planet
+})
+
+module.exports.RemoveFromFilmSpeciesPayload = PropTypes.shape({
+  filmsFilm: module.exports.Film,
+  speciesSpecies: module.exports.Species
+})
+
+module.exports.RemoveFromFilmStarshipsPayload = PropTypes.shape({
+  filmsFilm: module.exports.Film,
+  starshipsStarship: module.exports.Starship
+})
+
+module.exports.RemoveFromFilmVehiclesPayload = PropTypes.shape({
+  filmsFilm: module.exports.Film,
+  vehiclesVehicle: module.exports.Vehicle
+})
+
+module.exports.RemoveFromPeopleFilmPayload = PropTypes.shape({
+  charactersPerson: module.exports.Person,
+  filmsFilm: module.exports.Film
+})
+
+module.exports.RemoveFromPeoplePlanetPayload = PropTypes.shape({
+  residentsPerson: module.exports.Person,
+  homeworldPlanet: module.exports.Planet
+})
+
+module.exports.RemoveFromPeopleSpeciesPayload = PropTypes.shape({
+  peoplePerson: module.exports.Person,
+  speciesSpecies: module.exports.Species
+})
+
+module.exports.RemoveFromPeopleStarshipsPayload = PropTypes.shape({
+  pilotsPerson: module.exports.Person,
+  starshipsStarship: module.exports.Starship
+})
+
+module.exports.RemoveFromPeopleVehiclesPayload = PropTypes.shape({
+  pilotsPerson: module.exports.Person,
+  vehiclesVehicle: module.exports.Vehicle
+})
+
+module.exports.Species = PropTypes.shape({
+  averageHeight: PropTypes.number,
+  averageLifespan: PropTypes.number,
+  classification: PropTypes.string,
+  createdAt: module.exports.DateTime.isRequired,
+  designation: PropTypes.string,
+  eyeColor: PropTypes.arrayOf(module.exports.SPECIES_EYE_COLOR),
+  films: PropTypes.arrayOf(module.exports.Film),
+  hairColor: PropTypes.arrayOf(module.exports.SPECIES_HAIR_COLOR),
+  id: module.exports.ID.isRequired,
+  isPublished: PropTypes.bool.isRequired,
+  language: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  people: PropTypes.arrayOf(module.exports.Person),
+  skinColor: PropTypes.arrayOf(module.exports.SPECIES_SKIN_COLOR),
+  updatedAt: module.exports.DateTime.isRequired,
+  _filmsMeta: module.exports._QueryMeta.isRequired,
+  _peopleMeta: module.exports._QueryMeta.isRequired
+})
+
+module.exports.SPECIES_EYE_COLOR = PropTypes.oneOf([
+  \\"AMBER\\",
+  \\"BLACK\\",
+  \\"BLUE\\",
+  \\"BROWN\\",
+  \\"GOLD\\",
+  \\"GREEN\\",
+  \\"GREY\\",
+  \\"HAZEL\\",
+  \\"INDIGO\\",
+  \\"ORANGE\\",
+  \\"PINK\\",
+  \\"RED\\",
+  \\"SILVER\\",
+  \\"UNKNOWN\\",
+  \\"YELLOW\\",
+  \\"GOLDEN\\"
+])
+
+module.exports.SPECIES_HAIR_COLOR = PropTypes.oneOf([
+  \\"UNKNOWN\\",
+  \\"BROWN\\",
+  \\"WHITE\\",
+  \\"RED\\",
+  \\"BLACK\\",
+  \\"BLONDE\\"
+])
+
+module.exports.SPECIES_SKIN_COLOR = PropTypes.oneOf([
+  \\"BLUE\\",
+  \\"BROWN\\",
+  \\"CAUCASIAN\\",
+  \\"DARK\\",
+  \\"GREEN\\",
+  \\"GREY\\",
+  \\"MAGENTA\\",
+  \\"ORANGE\\",
+  \\"PALE\\",
+  \\"PALEPINK\\",
+  \\"PEACH\\",
+  \\"PINK\\",
+  \\"PURPLE\\",
+  \\"RED\\",
+  \\"TAN\\",
+  \\"UNKNOWN\\",
+  \\"WHITE\\",
+  \\"YELLOW\\",
+  \\"BLACK\\",
+  \\"ASIAN\\",
+  \\"HISPANIC\\"
+])
+
+module.exports.SpeciesOrderBy = PropTypes.oneOf([
+  \\"averageHeight_ASC\\",
+  \\"averageHeight_DESC\\",
+  \\"averageLifespan_ASC\\",
+  \\"averageLifespan_DESC\\",
+  \\"classification_ASC\\",
+  \\"classification_DESC\\",
+  \\"createdAt_ASC\\",
+  \\"createdAt_DESC\\",
+  \\"designation_ASC\\",
+  \\"designation_DESC\\",
+  \\"id_ASC\\",
+  \\"id_DESC\\",
+  \\"isPublished_ASC\\",
+  \\"isPublished_DESC\\",
+  \\"language_ASC\\",
+  \\"language_DESC\\",
+  \\"name_ASC\\",
+  \\"name_DESC\\",
+  \\"updatedAt_ASC\\",
+  \\"updatedAt_DESC\\"
+])
+
+module.exports.SpeciesPreviousValues = PropTypes.shape({
+  averageHeight: PropTypes.number,
+  averageLifespan: PropTypes.number,
+  classification: PropTypes.string,
+  createdAt: module.exports.DateTime.isRequired,
+  designation: PropTypes.string,
+  eyeColor: PropTypes.arrayOf(module.exports.SPECIES_EYE_COLOR),
+  hairColor: PropTypes.arrayOf(module.exports.SPECIES_HAIR_COLOR),
+  id: module.exports.ID.isRequired,
+  isPublished: PropTypes.bool.isRequired,
+  language: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  skinColor: PropTypes.arrayOf(module.exports.SPECIES_SKIN_COLOR),
+  updatedAt: module.exports.DateTime.isRequired
+})
+
+module.exports.SpeciesSubscriptionPayload = PropTypes.shape({
+  mutation: module.exports._ModelMutationType.isRequired,
+  node: module.exports.Species,
+  updatedFields: PropTypes.arrayOf(PropTypes.string),
+  previousValues: module.exports.SpeciesPreviousValues
+})
+
+module.exports.Starship = PropTypes.shape({
+  cargoCapacity: PropTypes.number,
+  class: PropTypes.string,
+  consumables: PropTypes.string,
+  costInCredits: PropTypes.number,
+  createdAt: module.exports.DateTime.isRequired,
+  crew: PropTypes.number,
+  films: PropTypes.arrayOf(module.exports.Film),
+  hyperdriveRating: PropTypes.number,
+  id: module.exports.ID.isRequired,
+  isPublished: PropTypes.bool.isRequired,
+  length: PropTypes.number,
+  manufacturer: PropTypes.arrayOf(PropTypes.string),
+  maxAtmospheringSpeed: PropTypes.number,
+  mglt: PropTypes.number,
+  name: PropTypes.string.isRequired,
+  passengers: PropTypes.number,
+  pilots: PropTypes.arrayOf(module.exports.Person),
+  updatedAt: module.exports.DateTime.isRequired,
+  _filmsMeta: module.exports._QueryMeta.isRequired,
+  _pilotsMeta: module.exports._QueryMeta.isRequired
+})
+
+module.exports.StarshipOrderBy = PropTypes.oneOf([
+  \\"cargoCapacity_ASC\\",
+  \\"cargoCapacity_DESC\\",
+  \\"class_ASC\\",
+  \\"class_DESC\\",
+  \\"consumables_ASC\\",
+  \\"consumables_DESC\\",
+  \\"costInCredits_ASC\\",
+  \\"costInCredits_DESC\\",
+  \\"createdAt_ASC\\",
+  \\"createdAt_DESC\\",
+  \\"crew_ASC\\",
+  \\"crew_DESC\\",
+  \\"hyperdriveRating_ASC\\",
+  \\"hyperdriveRating_DESC\\",
+  \\"id_ASC\\",
+  \\"id_DESC\\",
+  \\"isPublished_ASC\\",
+  \\"isPublished_DESC\\",
+  \\"length_ASC\\",
+  \\"length_DESC\\",
+  \\"maxAtmospheringSpeed_ASC\\",
+  \\"maxAtmospheringSpeed_DESC\\",
+  \\"mglt_ASC\\",
+  \\"mglt_DESC\\",
+  \\"name_ASC\\",
+  \\"name_DESC\\",
+  \\"passengers_ASC\\",
+  \\"passengers_DESC\\",
+  \\"updatedAt_ASC\\",
+  \\"updatedAt_DESC\\"
+])
+
+module.exports.StarshipPreviousValues = PropTypes.shape({
+  cargoCapacity: PropTypes.number,
+  class: PropTypes.string,
+  consumables: PropTypes.string,
+  costInCredits: PropTypes.number,
+  createdAt: module.exports.DateTime.isRequired,
+  crew: PropTypes.number,
+  hyperdriveRating: PropTypes.number,
+  id: module.exports.ID.isRequired,
+  isPublished: PropTypes.bool.isRequired,
+  length: PropTypes.number,
+  manufacturer: PropTypes.arrayOf(PropTypes.string),
+  maxAtmospheringSpeed: PropTypes.number,
+  mglt: PropTypes.number,
+  name: PropTypes.string.isRequired,
+  passengers: PropTypes.number,
+  updatedAt: module.exports.DateTime.isRequired
+})
+
+module.exports.StarshipSubscriptionPayload = PropTypes.shape({
+  mutation: module.exports._ModelMutationType.isRequired,
+  node: module.exports.Starship,
+  updatedFields: PropTypes.arrayOf(PropTypes.string),
+  previousValues: module.exports.StarshipPreviousValues
+})
+
+module.exports.Subscription = PropTypes.shape({
+  Asset: module.exports.AssetSubscriptionPayload,
+  Film: module.exports.FilmSubscriptionPayload,
+  Person: module.exports.PersonSubscriptionPayload,
+  Planet: module.exports.PlanetSubscriptionPayload,
+  Species: module.exports.SpeciesSubscriptionPayload,
+  Starship: module.exports.StarshipSubscriptionPayload,
+  Vehicle: module.exports.VehicleSubscriptionPayload
+})
+
+module.exports.Vehicle = PropTypes.shape({
+  cargoCapacity: PropTypes.number,
+  class: PropTypes.string,
+  consumables: PropTypes.string,
+  costInCredits: PropTypes.number,
+  createdAt: module.exports.DateTime.isRequired,
+  crew: PropTypes.number,
+  films: PropTypes.arrayOf(module.exports.Film),
+  id: module.exports.ID.isRequired,
+  isPublished: PropTypes.bool.isRequired,
+  length: PropTypes.number,
+  manufacturer: PropTypes.arrayOf(PropTypes.string),
+  maxAtmospheringSpeed: PropTypes.number,
+  model: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  passengers: PropTypes.number,
+  pilots: PropTypes.arrayOf(module.exports.Person),
+  updatedAt: module.exports.DateTime.isRequired,
+  _filmsMeta: module.exports._QueryMeta.isRequired,
+  _pilotsMeta: module.exports._QueryMeta.isRequired
+})
+
+module.exports.VehicleOrderBy = PropTypes.oneOf([
+  \\"cargoCapacity_ASC\\",
+  \\"cargoCapacity_DESC\\",
+  \\"class_ASC\\",
+  \\"class_DESC\\",
+  \\"consumables_ASC\\",
+  \\"consumables_DESC\\",
+  \\"costInCredits_ASC\\",
+  \\"costInCredits_DESC\\",
+  \\"createdAt_ASC\\",
+  \\"createdAt_DESC\\",
+  \\"crew_ASC\\",
+  \\"crew_DESC\\",
+  \\"id_ASC\\",
+  \\"id_DESC\\",
+  \\"isPublished_ASC\\",
+  \\"isPublished_DESC\\",
+  \\"length_ASC\\",
+  \\"length_DESC\\",
+  \\"maxAtmospheringSpeed_ASC\\",
+  \\"maxAtmospheringSpeed_DESC\\",
+  \\"model_ASC\\",
+  \\"model_DESC\\",
+  \\"name_ASC\\",
+  \\"name_DESC\\",
+  \\"passengers_ASC\\",
+  \\"passengers_DESC\\",
+  \\"updatedAt_ASC\\",
+  \\"updatedAt_DESC\\"
+])
+
+module.exports.VehiclePreviousValues = PropTypes.shape({
+  cargoCapacity: PropTypes.number,
+  class: PropTypes.string,
+  consumables: PropTypes.string,
+  costInCredits: PropTypes.number,
+  createdAt: module.exports.DateTime.isRequired,
+  crew: PropTypes.number,
+  id: module.exports.ID.isRequired,
+  isPublished: PropTypes.bool.isRequired,
+  length: PropTypes.number,
+  manufacturer: PropTypes.arrayOf(PropTypes.string),
+  maxAtmospheringSpeed: PropTypes.number,
+  model: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  passengers: PropTypes.number,
+  updatedAt: module.exports.DateTime.isRequired
+})
+
+module.exports.VehicleSubscriptionPayload = PropTypes.shape({
+  mutation: module.exports._ModelMutationType.isRequired,
+  node: module.exports.Vehicle,
+  updatedFields: PropTypes.arrayOf(PropTypes.string),
+  previousValues: module.exports.VehiclePreviousValues
+})"
+`;
