@@ -10,15 +10,23 @@ const scalars = {
 const getScalar = thing => Object.keys(scalars).indexOf(thing) === -1 ? `module.exports.${thing}` : `PropTypes.${scalars[thing]}`
 
 const handleField = field => {
-  // TODO: this probly needs a bit mroe work
+  // TODO: this probly needs a bit more work
   if (field.type.name) {
     return `${field.name.value}: ${getScalar(field.type.name.value)}`
   }
   if (field.type.kind === 'NonNullType') {
-    return `${field.name.value}: ${getScalar(field.type.type.name.value)}.isRequired`
+    if (field.type.type && field.type.type.name) {
+      return `${field.name.value}: ${getScalar(field.type.type.name.value)}.isRequired`
+    } else if (field.type.type.type && field.type.type.type.name) {
+      return `${field.name.value}: ${getScalar(field.type.type.type.name.value)}.isRequired`
+    }
   }
   if (field.type.kind === 'ListType') {
-    return `${field.name.value}: PropTypes.arrayOf(${getScalar(field.type.type.type.name.value)})`
+    if (field.type.type && field.type.type.name) {
+      return `${field.name.value}: PropTypes.arrayOf(${getScalar(field.type.type.name.value)})`
+    } else if (field.type.type.type && field.type.type.type.name) {
+      return `${field.name.value}: PropTypes.arrayOf(${getScalar(field.type.type.type.name.value)})`
+    }
   }
 }
 
