@@ -1,7 +1,7 @@
 {
   "name": "graphql2props",
   "version": "0.0.0",
-  "description": "",
+  "description": "Generate react proptypes from graphql schema",
   "main": "index.js",
   "scripts": {
     "test:schema": "graphql --project=swapi get-schema -o swapi.graphql",
